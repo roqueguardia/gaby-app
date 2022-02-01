@@ -12,6 +12,4 @@ class CartWidget extends React.Component{
     }
 }
 
-
-
 export default CartWidget;
