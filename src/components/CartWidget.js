@@ -7,7 +7,7 @@ class CartWidget extends React.Component{
 
     render(){
         return(
-            <img src={logo} alt="estrella fugaz"/>
+            <img src={logo} style={{maxWidth:100}} alt="estrella fugaz"/>
         );
     }
 }

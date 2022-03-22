@@ -1,12 +1,8 @@
 import React from 'react';
 
-class ItemListContainer extends React.Component{
-
-    render(){
-        return(
-            <p>¡Hola {this.props.nombre}! Empecemos...</p>
-        );
-    }
+export default function Saludo({nombre}) {
+    return(
+        <h1>Hola {nombre}! Bienvenido</h1>
+    );
 }
 
-export default ItemListContainer;
