@@ -1,5 +1,5 @@
-.container{
+div.card{
+    margin: 20px;
+    width: 400px;
     display: flex;
-    width: 200px;
-    margin: 40px;
 }

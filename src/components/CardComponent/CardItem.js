@@ -5,7 +5,7 @@ import './CardItem.css';
 const CardItem = ({name,age,description,img}) => {
 return (
         <div>
-    <Card  className='container'>
+    <Card>
         <CardBody>
         <CardTitle tag="h5">
             {name}
