@@ -1,5 +1,4 @@
-div.card{
-    margin: 20px;
-    width: 400px;
-    display: flex;
+.cardItem{
+    margin: 40px;
+    max-height: 480px;
 }
