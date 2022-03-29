@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import UserComponent from './UserComponent'
-
+import axios from 'axios'
 
 const CardListComponent = () => {
 
@@ -10,10 +10,14 @@ const CardListComponent = () => {
     console.log(users)
 
     useEffect( () => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    // .then(json => console.log(json))
-    .then(json => setUsers(json))
+
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    // .then(response => response.json())
+    // // .then(json => console.log(json))
+    // .then(json => setUsers(json))
+
+    axios('https://jsonplaceholder.typicode.com/users')
+    .then(res => setUsers(res.data))
     }, [])
 
     return (

@@ -21,10 +21,11 @@ function App() {
           altName='Gabriel'
           />
 
-        <CardListComponent/>
 
         </div>
 
+      <div className='container'><CardListComponent /></div>
+        
 
     <ItemCount stock='4'/>
 
