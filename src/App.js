@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import NavBar from './components/NavBar/NavBar'
-import ItemCount from './components/ItemCount';
+import Spinner from './components/Spinner/Spinner'
 import CardItem from './components/CardComponent/CardItem';
-import './App.css'
 import CardListComponent from './components/CardListComponent';
+import ItemCount from './components/ItemCount';
+import './App.css'
 
 
-function App() {
+const App = () => {
+  
+  const [IsLoading, setIsLoading] = useState (true)
+  
+  setTimeout(() => { setIsLoading(false) }, 2000)
+
   return (
     <div>
 
@@ -13,6 +20,9 @@ function App() {
 
         <div className='container'>
 
+          {IsLoading ? 
+          <Spinner/>
+          : 
           <CardItem 
           name='Gabriel Guardia' 
           age='22 years'
@@ -21,11 +31,13 @@ function App() {
           altName='Gabriel'
           />
 
+          }
 
         </div>
 
-      <div className='container'><CardListComponent /></div>
-        
+      <div className='container'>
+        <CardListComponent />
+      </div>
 
     <ItemCount stock='4'/>
 

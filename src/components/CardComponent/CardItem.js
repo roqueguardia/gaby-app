@@ -1,11 +1,12 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import React from 'react';
+import {Typography, CardMedia, CardContent, Card} from '@mui/material';
 
-export default function CardItem({name, age, description, img, altName}) {
+    
+
+
+    const CardItem = ({name, age, description, img, altName}) => {
     return (
+
     <Card sx={{ maxWidth: 300 }} className='cardItem'>
         <CardMedia
         component="img"
@@ -13,6 +14,7 @@ export default function CardItem({name, age, description, img, altName}) {
         image={img}
         alt={altName}
     />
+
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
         {name}
@@ -22,6 +24,9 @@ export default function CardItem({name, age, description, img, altName}) {
             {description}
         </Typography>
     </CardContent>
+
     </Card>
     );
 }
+
+export default CardItem;

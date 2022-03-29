@@ -7,18 +7,12 @@ const CardListComponent = () => {
     const [users, setUsers] = useState([])
 
 
-    console.log(users)
-
     useEffect( () => {
-
-    // fetch('https://jsonplaceholder.typicode.com/users')
-    // .then(response => response.json())
-    // // .then(json => console.log(json))
-    // .then(json => setUsers(json))
-
-    axios('https://jsonplaceholder.typicode.com/users')
+    axios('https://api.github.com/users')
     .then(res => setUsers(res.data))
     }, [])
+
+
 
     return (
     <div>

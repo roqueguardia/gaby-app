@@ -1,8 +1,6 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import {Typography, CardMedia, CardContent, Card} from '@mui/material';
+
 
 const UserComponent = ({data}) => {
   return (
@@ -10,15 +8,15 @@ const UserComponent = ({data}) => {
       <CardMedia
         component="img"
         height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image={data.avatar_url}
         alt="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data.name}
+          {data.login}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {data.username}
+          {data.repos_url}
         </Typography>
       </CardContent>
     </Card>
